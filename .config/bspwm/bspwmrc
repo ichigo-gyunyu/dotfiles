@@ -33,7 +33,8 @@ bspc rule -a Steam desktop='^8' state=floating follow=false
 bspc rule -a chatterino follow=false split_ratio=0.83
 
 # desktop rules
+bspc desktop I --layout monocle
 bspc desktop II --layout monocle
 bspc desktop III --layout monocle
+bspc desktop VIII --layout monocle
 bspc desktop IX --layout monocle
-bspc desktop VIII --toggle floating=on

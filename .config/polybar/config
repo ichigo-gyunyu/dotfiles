@@ -57,6 +57,10 @@ cursor-scroll = ns-resize
 
 enable-ipc = true
 
+tray-position = right
+tray-offset-x = 0
+tray-offset-y = -2
+
 [module/mpv]
 type = custom/script
 interval = 1
