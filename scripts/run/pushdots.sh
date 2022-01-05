@@ -1,4 +1,3 @@
-
 source $HOME/.config/zsh/aliases.zsh
 
 dotfiles add \
