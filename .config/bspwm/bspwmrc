@@ -1,0 +1,39 @@
+#! /bin/sh
+bspc rule -r "*"
+
+pgrep -x sxhkd >/dev/null || sxhkd &
+$HOME/.config/polybar/launch.sh
+# killall -I Discord
+# discord &
+# killall -I chatterino
+# bspc rule -a chatterino -o desktop='^4' hidden=on
+# chatterino &
+killall -I transmission-daemon
+transmission-daemon &
+
+bspc monitor -d I II III IV V VI VII VIII IX X
+
+# general
+bspc config border_width 1
+bspc config window_gap 0
+bspc config top_padding 30
+bspc config focused_border_color \#449dab
+
+bspc config split_ratio 0.52
+bspc config borderless_monocle true
+bspc config gapless_monocle true
+
+bspc config focus_follows_pointer true
+bspc config ignore_ewmh_focus true
+bspc config automatic_scheme alternate
+
+# application rules
+bspc rule -a discord desktop='^9' follow=false
+bspc rule -a Steam desktop='^8' state=floating follow=false
+bspc rule -a chatterino follow=false split_ratio=0.83
+
+# desktop rules
+bspc desktop II --layout monocle
+bspc desktop III --layout monocle
+bspc desktop IX --layout monocle
+bspc desktop VIII --toggle floating=on

@@ -1,0 +1,8 @@
+#!/bin/bash
+xsetroot -cursor_name left_ptr
+xset r rate 200 70
+dunst &
+picom &
+xwallpaper --zoom $HOME/pictures/wallpaper.png
+xbacklight -set 70
+exec bspwm
