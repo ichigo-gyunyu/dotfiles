@@ -6,7 +6,7 @@
 super + Return
 	alacritty
 super + shift + Return
-  bspc rule -a Alacritty -o state=floating center=true rectangle=1200x900+0+0 && \
+  bspc rule -a Alacritty -o state=floating center=true && \
   alacritty
 # program launcher
 # Super_L ; Super_L
@@ -121,11 +121,11 @@ XF86MonBrightnessDown
 
 # media keys
 XF86AudioPlay
-  ~/scripts/spotify/control.sh toggle
+  ~/scripts/utils/media_control.sh toggle
 XF86AudioPrev
-  ~/scripts/spotify/control.sh prev
+  ~/scripts/utils/media_control.sh prev
 XF86AudioNext
-  ~/scripts/spotify/control.sh next
+  ~/scripts/utils/media_control.sh next
 
 # applications
 super + b

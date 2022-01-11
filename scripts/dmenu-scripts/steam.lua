@@ -1,9 +1,11 @@
 local steam_ids = {
-	["dota"] = 570,
+	["Dota 2"] = 570,
 	["Celeste"] = 504230,
 	["Muse Dash"] = 774171,
 	["Hollow Knight"] = 367520,
 	["Dark Souls: Remastered"] = 570940,
+	["Papers, Please"] = 239030,
+	["Cuphead"] = 268910,
 }
 
 local game_list = ""

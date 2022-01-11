@@ -1,6 +1,7 @@
 #! /bin/sh
 bspc rule -r "*"
 
+# startup
 pgrep -x sxhkd >/dev/null || sxhkd &
 $HOME/.config/polybar/launch.sh
 # killall -I Discord
@@ -10,6 +11,11 @@ $HOME/.config/polybar/launch.sh
 # chatterino &
 killall -I transmission-daemon
 transmission-daemon &
+killall -I pa_source_port.sh
+$HOME/scripts/utils/pa_source_port.sh &
+killall -I Alacritty
+bspc rule -a Alacritty -o desktop='^10'
+alacritty -e tmux &
 
 bspc monitor -d I II III IV V VI VII VIII IX X
 
@@ -38,3 +44,4 @@ bspc desktop II --layout monocle
 bspc desktop III --layout monocle
 bspc desktop VIII --layout monocle
 bspc desktop IX --layout monocle
+bspc desktop X --layout monocle

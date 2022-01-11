@@ -1,0 +1,2 @@
+#!/bin/sh
+mpv "https://www.youtube.com/playlist?list=PLA4XEe9tV8qZb7S1jiEMrXBmRQ6TxSdxm" --shuffle --no-video --no-resume-playback --volume=60

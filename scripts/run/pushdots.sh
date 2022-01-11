@@ -12,6 +12,7 @@ dotfiles add \
     ~/.config/polybar \
     ~/.config/sx \
     ~/.config/sxhkd \
+    ~/.config/tmux \
     ~/.config/transmission-daemon/*.json \
     ~/.config/zsh \
     ~/.gitconfig \
