@@ -2,17 +2,15 @@
 bspc rule -r "*"
 
 # startup
-pgrep -x sxhkd >/dev/null || sxhkd &
+pgrep -x sxhkd > /dev/null || sxhkd &
 $HOME/.config/polybar/launch.sh
 # killall -I Discord
 # discord &
 # killall -I chatterino
 # bspc rule -a chatterino -o desktop='^4' hidden=on
 # chatterino &
-killall -I transmission-daemon
-transmission-daemon &
-killall -I pa_source_port.sh
-$HOME/scripts/utils/pa_source_port.sh &
+pgrep -x transmission-daemon > /dev/null || transmission-daemon &
+pgrep -x acpi_listen > /dev/null || $HOME/scripts/utils/pa_source_port &
 killall -I Alacritty
 bspc rule -a Alacritty -o desktop='^10'
 alacritty -e tmux &
