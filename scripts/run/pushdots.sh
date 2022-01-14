@@ -10,6 +10,7 @@ dotfiles add \
     ~/.config/mpv/script* \
     ~/.config/neofetch \
     ~/.config/polybar \
+    ~/.config/rclone/rclone.conf \
     ~/.config/sx \
     ~/.config/sxhkd \
     ~/.config/tmux \
@@ -22,4 +23,4 @@ dotfiles add \
 
 dotfiles status
 dotfiles commit -m "push script"
-dotfiles push
+# dotfiles push
