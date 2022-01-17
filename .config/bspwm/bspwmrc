@@ -11,8 +11,8 @@ $HOME/.config/polybar/launch.sh
 # chatterino &
 pgrep -x transmission-daemon > /dev/null || transmission-daemon &
 pgrep -x acpi_listen > /dev/null || $HOME/scripts/utils/pa_source_port &
-killall -I Alacritty
-bspc rule -a Alacritty -o desktop='^10'
+killall -I tmux:\ server
+bspc rule -a Alacritty -o desktop='^1'
 alacritty -e tmux &
 
 bspc monitor -d I II III IV V VI VII VIII IX X
@@ -37,9 +37,6 @@ bspc rule -a Steam desktop='^8' state=floating follow=false
 bspc rule -a chatterino follow=false split_ratio=0.83
 
 # desktop rules
-bspc desktop I --layout monocle
-bspc desktop II --layout monocle
-bspc desktop III --layout monocle
-bspc desktop VIII --layout monocle
-bspc desktop IX --layout monocle
-bspc desktop X --layout monocle
+for desktop_id in $(bspc query -D); do
+    bspc desktop $desktop_id --layout monocle
+done

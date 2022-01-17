@@ -69,6 +69,10 @@ super + bracket{left,right}
 super + {_,shift + }{1-9,0}
 	bspc {desktop -f,node -d} '^{1-9,10}'
 
+# toggle between the current and previously focused desktop
+super + grave
+    bspc desktop -f last
+
 #
 # preselect
 #
