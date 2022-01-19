@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# https://github.com/mtikekar/zathura-tabbed
+xidfile="/run/user/$(id -u)/zt.xid"
+wminstance="zt"
+
+set -o pipefail
+if [ -r "$xidfile" ] && xid=$(cat "$xidfile") && \
+    xprop -id "$xid" WM_CLASS 2>/dev/null | grep -q "$wminstance";
+then
+    echo "$xid exists"
+else
+    read xid < <(tabbed -cdn "$wminstance" 2>/dev/null)
+    echo "$xid" > "$xidfile"
+fi
+
+zathura -e "$xid" "$@" &>/dev/null &
+
+
+
+

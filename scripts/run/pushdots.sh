@@ -13,8 +13,8 @@ dotfiles add \
     ~/.config/rclone/rclone.conf \
     ~/.config/sx \
     ~/.config/sxhkd \
-    ~/.config/tmux \
     ~/.config/transmission-daemon/*.json \
+    ~/.config/zathura \
     ~/.config/zsh \
     ~/.gitconfig \
     ~/.zshenv \

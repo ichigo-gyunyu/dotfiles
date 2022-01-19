@@ -134,8 +134,8 @@ super + shift + b
 	chromium --incognito
 
 # dmenu scripts
-alt + {a,s,d}
-  {anime.sh,lua $HOME/scripts/dmenu-scripts/steam.lua, kami.sh}
+alt + {a,s,d,shift+d}
+  {anime.sh,lua $HOME/scripts/dmenu-scripts/steam.lua, documents.sh, kami.sh}
 alt + shift + c
   killall steam mpv
 
@@ -150,5 +150,5 @@ ctrl + space
     dunstctl close-all
 ctrl + shift + period
     dunstctl context
-ctrl + grave
+ctrl + shift + space
     dunstctl history-pop

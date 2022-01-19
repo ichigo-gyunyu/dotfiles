@@ -4,16 +4,10 @@ bspc rule -r "*"
 # startup
 pgrep -x sxhkd > /dev/null || sxhkd &
 $HOME/.config/polybar/launch.sh
-# killall -I Discord
-# discord &
-# killall -I chatterino
-# bspc rule -a chatterino -o desktop='^4' hidden=on
-# chatterino &
+pgrep -x Discord > /dev/null || discord &
 pgrep -x transmission-daemon > /dev/null || transmission-daemon &
 pgrep -x acpi_listen > /dev/null || $HOME/scripts/utils/pa_source_port &
-killall -I tmux:\ server
-bspc rule -a Alacritty -o desktop='^1'
-alacritty -e tmux &
+pgrep -x alacritty > /dev/null || tabbed -cd alacritty --embed
 
 bspc monitor -d I II III IV V VI VII VIII IX X
 
@@ -35,6 +29,8 @@ bspc config automatic_scheme alternate
 bspc rule -a discord desktop='^9' follow=false
 bspc rule -a Steam desktop='^8' state=floating follow=false
 bspc rule -a chatterino follow=false split_ratio=0.83
+bspc rule -a Zathura state=tiled
+bspc rule -a tabbed:zt desktop='^3' follow=true
 
 # desktop rules
 for desktop_id in $(bspc query -D); do
