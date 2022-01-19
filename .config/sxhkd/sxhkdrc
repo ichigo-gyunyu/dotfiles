@@ -105,10 +105,6 @@ super + alt + {h,j,k,l}
 super + alt + shift + {h,j,k,l}
 	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
 
-# "Maximize/Minimize"
-super + {Up,Down}
-  {maximize.sh, bspc node -g hidden}
-
 # volume
 XF86AudioLowerVolume
   pulsemixer --change-volume -5
@@ -119,7 +115,7 @@ XF86AudioMute
 
 # brightness
 XF86MonBrightnessUp
-    	xbacklight -inc 10
+    xbacklight -inc 10
 XF86MonBrightnessDown
     xbacklight -dec 10
 
@@ -138,8 +134,8 @@ super + shift + b
 	chromium --incognito
 
 # dmenu scripts
-alt + {a,s}
-  {anime.sh,lua $HOME/scripts/dmenu-scripts/steam.lua}
+alt + {a,s,d}
+  {anime.sh,lua $HOME/scripts/dmenu-scripts/steam.lua, kami.sh}
 alt + shift + c
   killall steam mpv
 
