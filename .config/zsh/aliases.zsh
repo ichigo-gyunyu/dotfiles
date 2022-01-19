@@ -3,7 +3,7 @@ alias ls='ls -lh --color=auto'
 alias dotfiles='/usr/bin/git --git-dir=$HOME/repos/dotfiles --work-tree=$HOME'
 alias tr='transmission-remote'
 alias v='nvim'
-alias mem='sudo python ~/scripts/ps_mem.py'
+alias mem='sudo python ~/stuff/ps_mem.py'
 alias p="yay -S"
 alias pu="yay -Syyu"
 alias pr="yay -Rns"
