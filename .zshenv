@@ -19,5 +19,6 @@ export BROWSER="chromium"
 export VIDEO="mpv"
 export WM="bspwm"
 
-# pip
-PIP_TARGET="/usr/lib/python3.10/site-packages"
+# other environs
+export PIP_TARGET="/usr/lib/python3.10/site-packages"
+export QT_STYLE_OVERRIDE=Adwaita-Dark

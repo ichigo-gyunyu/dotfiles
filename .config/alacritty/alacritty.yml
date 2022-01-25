@@ -16,6 +16,8 @@ window:
     instance: Alacritty
     general: Alacritty
 
+  opacity: 1
+
 scrolling:
   history: 10000
   multiplier: 5
@@ -91,8 +93,6 @@ schemes:
       white: '0xacb0d0'
 
 colors: *tokyo-night
-
-background_opacity: 0.95
 
 cursor:
   style:

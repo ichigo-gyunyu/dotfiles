@@ -27,4 +27,3 @@ PROMPT+='%B%F{244}%2~%f%b '
 PROMPT+='$vcs_info_msg_0_'
 PROMPT+='%B%F{$NUM}› %f%b'
 
-precmd () { print -Pn "\e]2;%~" } # title bar prompt

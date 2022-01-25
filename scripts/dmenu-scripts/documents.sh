@@ -1,13 +1,13 @@
 #!/bin/bash
 
-dirs=("$HOME/stuff/4-2" "$HOME/stuff/docs")
+dirs=("$HOME/stuff/4-2" "$HOME/stuff/docs/read")
 
 for d in ${dirs[@]}; do
-    docs+=$(find "$d" -name "*.pdf" -or -name "*.djvu")
+    docs+=$(find "$d" -name "*.pdf" -or -name "*.djvu")"\n"
 done
 
-op=$(echo "$docs" | dmenu -l 7 -i -p "Open a document: ")
-if [[ -z "$op" ]]; then
+op=$(echo -e "$docs" | dmenu -l 7 -i -p "Open a document: ")
+if [ -z "$op" ]; then
     exit 1
 fi
 
