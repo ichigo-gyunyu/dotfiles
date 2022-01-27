@@ -134,8 +134,8 @@ super + shift + b
 	chromium --incognito
 
 # dmenu scripts
-alt + {a,s,d,shift+d}
-  {anime.sh,lua $HOME/scripts/dmenu-scripts/steam.lua, documents.sh, kami.sh}
+alt + {a,s,d,shift+d,r}
+  {anime.sh, lua $HOME/scripts/dmenu-scripts/steam.lua, documents.sh, kami.sh, run.sh}
 alt + shift + c
   killall steam mpv
 

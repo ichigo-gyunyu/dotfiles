@@ -1,0 +1,4 @@
+#!/bin/bash
+
+pgrep -x spotifyd > /dev/null || spotifyd
+chromium --app="https://open.spotify.com" &
