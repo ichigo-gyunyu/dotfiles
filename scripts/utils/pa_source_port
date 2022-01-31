@@ -7,6 +7,7 @@ do
     if [ "$line" = "jack/headphone HEADPHONE plug" ]
     then
        pacmd set-source-port $index analog-input-headset-mic;
+       pacmd set-source-volume $index 40000
     elif [ "$line" = "jack/headphone HEADPHONE unplug" ]
     then
        pacmd set-source-port $index analog-input-internal-mic;
