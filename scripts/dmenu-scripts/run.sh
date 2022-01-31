@@ -8,4 +8,4 @@ if [ -z "$op" ]; then
     exit 1
 fi
 
-"$op" &
+"$dir$op" &

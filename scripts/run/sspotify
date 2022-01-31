@@ -1,0 +1,6 @@
+#!/bin/bash
+
+pgrep -x spotify > /dev/null && exit
+$HOME/scripts/utils/spotify_change &
+spotify
+pgrep -x spotify_change | xargs kill

@@ -30,6 +30,7 @@ bspc rule -a Steam desktop='^8' state=floating follow=false
 bspc rule -a chatterino follow=false split_ratio=0.83
 bspc rule -a Zathura state=tiled
 bspc rule -a tabbed:zt desktop='^3' follow=true
+bspc rule -a Spotify desktop='^9' follow=false
 
 # desktop rules
 for desktop_id in $(bspc query -D); do
