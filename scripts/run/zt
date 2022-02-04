@@ -15,7 +15,3 @@ else
 fi
 
 zathura -e "$xid" "$@" &>/dev/null &
-
-
-
-

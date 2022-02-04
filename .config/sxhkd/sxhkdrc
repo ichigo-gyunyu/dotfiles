@@ -58,7 +58,7 @@ super + {_,shift + }{h,j,k,l}
 	bspc node -{f,s} {west,south,north,east}
 
 # focus the next/previous window in the current desktop
-super + {_,shift + }Tab
+alt + {_,shift + }Tab
 	bspc node -f {next,prev}.local.!hidden.window
 
 # focus the next/previous desktop in the current monitor
@@ -129,13 +129,13 @@ XF86AudioNext
 
 # applications
 super + b
-  $HOME/scripts/chromium.sh
+    chromium
 super + shift + b
 	chromium --incognito
 
 # dmenu scripts
-alt + {a,s,d,shift+d,r}
-  {anime.sh, lua $HOME/scripts/dmenu-scripts/steam.lua, documents.sh, kami.sh, run.sh}
+alt + {a,s,d,shift+d,r,t}
+  {anime.sh, lua $HOME/scripts/dmenu-scripts/steam.lua, documents.sh, kami.sh, run.sh, twitch.sh}
 alt + shift + c
   killall steam mpv
 

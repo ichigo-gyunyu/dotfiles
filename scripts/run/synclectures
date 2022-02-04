@@ -1,0 +1,15 @@
+#!/bin/bash
+
+set -e
+
+cd ~/mnt/
+rclone mount --daemon dbak: ./dbak
+rsync -avP --dry-run ~/hdd/recordings ./dbak
+
+read -p "looks good? (y/n) " -n 1 -r
+echo
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+    rsync -avP ~/hdd/recordings ./dbak
+fi
+umount ./dbak
