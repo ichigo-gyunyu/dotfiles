@@ -2,7 +2,6 @@
 
 PLAYER="spotify"
 ART_CACHE_DIR="$HOME/.cache/spotify_album_art"
-ALBUMART_PNG="$ART_CACHE_DIR/$albumart_id.png"
 mkdir -p "$ART_CACHE_DIR"
 
 parse_op() {
@@ -19,14 +18,15 @@ do
     album=$(parse_op album[[:space:]])
     albumart_url=$(parse_op artUrl)
     albumart_id=$(echo "$albumart_url" | awk -F\/ '{print $NF}' | xargs) # xargs to trim whitespace
+    albumart_png="$ART_CACHE_DIR/$albumart_id.png"
 
 
-    if [ ! -f "$ALBUMART_PNG" ]; then
-        curl $albumart_url --silent --output "$ALBUMART_PNG"
+    if [ ! -f "$albumart_png" ]; then
+        curl $albumart_url --silent --output "$albumart_png"
     fi
 
     if [ -n "$title" ]; then
-        dunstify -t 3000 -r 412 -i "$ALBUMART_PNG" "$title" "$artist - $album"
+        dunstify -t 3000 -r 412 -i "$albumart_png" "$title" "$artist - $album"
     fi
 done
 

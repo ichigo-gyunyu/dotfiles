@@ -1,4 +1,4 @@
 #!/bin/sh
 f="/home/ichigo/stuff/logs/filesys/$(date +%F_%T_log)"
-/bin/tree -iaf -I 'mnt|.cache|hdd|discord|chromium|Steam|repos|nvim' /home/ichigo > "$f"
+/bin/tree -iaf -I 'mnt|.cache|hdd|discord|chromium|Steam|repos|nvim|.registry' /home/ichigo > "$f"
 chown -f ichigo:ichigo "$f"

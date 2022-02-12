@@ -1,8 +1,10 @@
 #!/bin/sh
+
+cat ~/.cache/weatherreport
+
 # Query the API
 response=$(curl -s "https://api.openweathermap.org/data/2.5/weather?zip=625020,in&appid=e0e8c371e231c18f128cca649211c7bd" | jq '.weather[0].icon, .main.temp')
 if [[ -z "$response" ]]; then
-	echo "$(<.cache/weatherreport)"
 	exit 1
 fi
 # Remove quotes

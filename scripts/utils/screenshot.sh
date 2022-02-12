@@ -1,8 +1,13 @@
 #!/bin/sh
+
+SCREENSHOT_DIR="$HOME/pictures/screenshots"
+mkdir -p $SCREENSHOT_DIR
+PIC="$SCREENSHOT_DIR/$(date +%F_%T).png"
+
 if [ "$1" = "-f" ]; then
-	import -window root $HOME/.cache/s.png
+	import -window root $PIC
 else
-	import $HOME/.cache/s.png
+	import $PIC
 fi
-xclip -t image/png -selection clipboard -i $HOME/.cache/s.png
-dunstify -t 3000 -i $HOME/.cache/s.png "Copied to Clipboard"
+xclip -t image/png -selection clipboard -i $PIC
+dunstify -t 3000 -i $PIC "TTours" "Copied to Clipboard"
