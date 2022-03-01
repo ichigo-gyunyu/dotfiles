@@ -5,7 +5,7 @@ bspc rule -r "*"
 pgrep -x sxhkd > /dev/null || sxhkd &
 $HOME/.config/polybar/launch.sh
 pgrep -x Discord > /dev/null || discord &
-pgrep -x transmission-daemon > /dev/null || transmission-daemon &
+# pgrep -x transmission-daemon > /dev/null || transmission-daemon &
 pgrep -x acpi_listen > /dev/null || $HOME/scripts/utils/pa_source_port &
 
 bspc monitor -d I II III IV V VI VII VIII IX X

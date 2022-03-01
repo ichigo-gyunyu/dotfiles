@@ -1,13 +1,14 @@
 #!/bin/bash
 
 # https://askubuntu.com/a/1284966
+VOL_LEVEL=35000
 acpi_listen | while IFS= read -r line;
 do
     index=$(pacmd list-sources | egrep 'index|ports|analog-input-headset-mic' | egrep '\*\sindex:\s+[0-9]'  | cut -d':' -f2);
     if [ "$line" = "jack/headphone HEADPHONE plug" ]
     then
        pacmd set-source-port $index analog-input-headset-mic;
-       pacmd set-source-volume $index 40000
+       pacmd set-source-volume $index $VOL_LEVEL
     elif [ "$line" = "jack/headphone HEADPHONE unplug" ]
     then
        pacmd set-source-port $index analog-input-internal-mic;

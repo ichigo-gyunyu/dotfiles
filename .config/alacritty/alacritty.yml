@@ -1,5 +1,5 @@
 env:
-  TERM: alacritty
+  TERM: xterm-256color
 
 window:
   padding:
@@ -96,8 +96,9 @@ colors: *tokyo-night
 
 cursor:
   style:
-    shape: Beam
-  vi_mode_style: Block
+    shape: Block
+  vi_mode_style:
+  shape: Block
 
 mouse:
   double_click: { threshold: 300 }
