@@ -61,6 +61,8 @@ tray-position = right
 tray-offset-x = 0
 tray-offset-y = -2
 
+bottom = false
+
 [module/xwindow]
 type = internal/xwindow
 
