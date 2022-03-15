@@ -1,0 +1,4 @@
+[Desktop Entry]
+Type=Application
+Name=Torrent
+Exec=/home/ichigo/scripts/utils/magnet_add.sh %U

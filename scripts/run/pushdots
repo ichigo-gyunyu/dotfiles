@@ -6,6 +6,7 @@ dotfiles add \
     ~/.config/chromium-flags.conf \
     ~/.config/dunst \
     ~/.config/gtk-3.0 \
+    ~/.config/mimeapps.list \
     ~/.config/mpv/*.conf \
     ~/.config/mpv/script* \
     ~/.config/neofetch \
@@ -17,6 +18,7 @@ dotfiles add \
     ~/.config/zathura \
     ~/.config/zsh \
     ~/.gitconfig \
+    ~/.local/share/applications \
     ~/.zshenv \
     ~/.zshrc \
     ~/scripts
